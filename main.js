@@ -60,3 +60,5 @@ var isSquare = function(n){
 
 
 // 6 Kyu //
+
+lalal
