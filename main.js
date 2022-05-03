@@ -27,6 +27,17 @@ function check(a, x) {
     }
 }
 
+//Create a function with two arguments that will return an array of the first (n) multiples of (x). Assume both the given number and the number of times to count will be positive numbers greater than 0. Return the results as an array (or list in Python, Haskell or Elixir
+
+function countBy(x, n) {
+  let z = [];
+  let i = 0;
+  while (z.length < n) {
+    z.push(i += x);
+  }
+  return z;
+}
+
 
 // 7 Kyu //
 
@@ -34,6 +45,17 @@ function check(a, x) {
 
 function filter_list(l) {
   return l.filter(function(v) {return typeof v == 'number'})
+}
+
+//Given an integral number, determine if it's a square number: In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.The tests will always use some integral number, so don't worry about that in dynamic typed languages.
+
+var isSquare = function(n){
+  let sqrRoot = Math.sqrt(n);
+  if(sqrRoot === Math.floor(sqrRoot)) {
+    return true;
+  }else {
+    return false;
+  }
 }
 
 
