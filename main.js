@@ -38,6 +38,21 @@ function countBy(x, n) {
   return z;
 }
 
+// Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+function digitize(n) {
+  let numArray = n.toString().split('').map(element => parseInt(element));
+  return numArray.reverse();
+}
+
+//I'm new to coding and now I want to get the sum of two arrays...actually the sum of all their elements. I'll appreciate for your help.
+
+function arrayPlusArray(arr1, arr2) {
+  let arr1Sum = arr1.reduce((acc, current) => acc + current, 0)
+  let arr2Sum = arr2.reduce((acc, current) => acc + current, 0)
+  return arr1Sum + arr2Sum; 
+}
+
 
 // 7 Kyu //
 
@@ -74,6 +89,25 @@ function dbSort(a){
   return sortedNumbers.concat(sortedStrings);
 }
 
+//Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest.
+function sortByLength (array) {
+  let sortedArr = array.sort((a,b) => a.length - b.length);
+  return sortedArr;
+}
+
 
 // 6 Kyu //
 
+//You are going to be given an array of integers. Your job is to take that array and find an index N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index that would make this happen, return -1.
+
+function findEvenIndex(arr) {
+  let equalIndex = -1
+  arr.forEach((item, index) => {
+    let leftSide = arr.slice(0,index).reduce((sum,item) => sum + item, 0)
+    let rightSide = arr.slice(index + 1).reduce((sum, item) => sum + item, 0)
+    if(leftSide == rightSide) {
+      equalIndex = index;
+    }
+  })
+  return equalIndex;
+}
