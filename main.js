@@ -1,5 +1,10 @@
 // 8 Kyu //
 
+//Implement a function which convert the given boolean value into its string representation.
+function booleanToString(b){
+  return String(b);
+}
+
 //We need a function that can transform a string into a number. What ways of achieving this do you know?
 
 var stringToNumber = function(str){
@@ -61,6 +66,12 @@ function arrayPlusArray(arr1, arr2) {
 
 
 // 7 Kyu //
+
+//Some really funny web dev gave you a sequence of numbers from his API response as an sequence of strings! You need to cast the whole array to the correct type. Create the function that takes as a parameter a sequence of numbers represented as strings and outputs a sequence of numbers.
+
+function toNumberArray(stringarray){
+  return stringarray.map(element => Number(element));
+}
 
 //Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
 function solution(str, ending){
