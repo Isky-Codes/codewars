@@ -1,5 +1,14 @@
 // 8 Kyu //
 
+//write me a function stringy that takes a size and returns a string of alternating '1s' and '0s'.
+function stringy(size) {
+  let str = '';
+  for(let i = 1; i <= size; i++) {
+    str += i % 2;
+  }
+  return str;
+}
+
 //Implement a function which convert the given boolean value into its string representation.
 function booleanToString(b){
   return String(b);
@@ -150,4 +159,18 @@ function findEvenIndex(arr) {
     }
   })
   return equalIndex;
+}
+
+//The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+
+function count (string) {  
+  let countsString = {};
+  let stringArr = string.split('');
+  if(!stringArr) {
+    return countsString = {}
+  }else {
+    stringArr.forEach(x => countsString[x] = (countsString[x] || 0) + 1);
+  }
+  return countsString;
+
 }
