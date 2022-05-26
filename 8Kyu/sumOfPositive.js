@@ -4,6 +4,6 @@ function positiveSum(arr) {
     if(element > 0) {
       sum += element;
     }
-  })
+  });
   return sum;
 }
